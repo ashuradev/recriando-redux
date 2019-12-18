@@ -1,0 +1,22 @@
+{
+  "devDependencies": {
+    "@babel/core": "^7.7.5",
+    "babel-loader": "^8.0.6",
+    "babel-preset-env": "^1.7.0",
+    "webpack": "^4.41.3",
+    "webpack-cli": "^3.3.10",
+    "webpack-dev-server": "^3.10.0"
+  },
+  "name": "recriando-redux",
+  "private": true,
+  "version": "1.0.0",
+  "description": "Recriando a API do Redux para fins de estudos.",
+  "repository": "git@github.com:ashuradev/recriando-redux.git",
+  "author": "Ashura <the.lucas2016@gmail.com>",
+  "license": "MIT",
+  "scripts": {
+    "build": "webpack",
+    "serve": "webpack-dev-server"
+  },
+  "dependencies": {}
+}
