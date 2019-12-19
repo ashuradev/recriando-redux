@@ -2,6 +2,6 @@ export default reducers => (state, action) =>
   Object.fromEntries(
     Object.entries(reducers).map(([key, reducer]) => [
       key,
-      reducer(state[key], action)
+      reducer(state && state[key], action)
     ])
   );

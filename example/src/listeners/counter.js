@@ -1,5 +1,6 @@
-const counter = document.getElementById('counter');
+import store from '../store';
 
-export default store => {
-  console.log('Novo estado: ' + store.getState().counter);
-};
+const counterView = document.getElementById('counter');
+
+export default () =>
+  (counterView.innerText = `Contador: ${store.getState().counter}`);

@@ -1,13 +1,13 @@
-export default reducer => {
-  let state = {};
-  let listeners = [];
+import { FLUXLY_INIT } from './actionTypes';
 
-  dispatch({ type: '@redux:/state.create' });
+export default reducer => {
+  let state;
+  let listeners = [];
 
   function dispatch(action) {
     state = reducer(state, action);
 
-    listeners.forEach(l => l(this));
+    listeners.forEach(l => l());
   }
 
   function getState() {
@@ -22,10 +22,13 @@ export default reducer => {
     reducer = nextReducer;
   }
 
+  dispatch({ type: FLUXLY_INIT });
+
   return {
     dispatch,
     getState,
     subscribe,
-    replaceReducer
+    replaceReducer,
+    state
   };
 };
