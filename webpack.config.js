@@ -4,7 +4,7 @@ const glob = require('glob');
 module.exports = {
   entry: {
     example: path.resolve('example', 'src', 'index.js'),
-    flourly: path.resolve('src', 'index.js')
+    fluxly: path.resolve('src', 'index.js')
   },
 
   output: {
