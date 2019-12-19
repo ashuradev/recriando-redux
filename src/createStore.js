@@ -4,8 +4,8 @@ export default reducer => {
   let state;
   let listeners = [];
 
-  function dispatch(action) {
-    state = reducer(state, action);
+  async function dispatch(action) {
+    state = reducer(state, await action);
 
     listeners.forEach(l => l());
   }
